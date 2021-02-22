@@ -4,9 +4,8 @@ node ('master'){
             checkout scm
         }
 
-        stage('Executando o comando Java'){
-            sh 'cd ..'
-            sh 'pwd'
+        stage('Executando o comando Java'){            
+            sh 'java Test.java'
         }
 
     }catch(except){
