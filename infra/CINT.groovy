@@ -5,7 +5,8 @@ node ('master'){
             sh 'pwd'
         }
 
-        stage('Instalando o Java'){            
+        stage('Instalando o Java'){   
+            sh 'java -version'         
             sh 'java Test.java'
         }
 
