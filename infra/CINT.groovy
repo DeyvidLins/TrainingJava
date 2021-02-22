@@ -1,14 +1,18 @@
 node ('master'){
     try {
         stage('Clonando do Repositório'){
-            sh 'git checkout scm'
+            checkout scm
         }
 
         stage('Executando o comando Java'){
-            sh ''
+            sh 'cd ..'
+            sh 'pwd'
         }
 
-    }catch(exception e){
+    }catch(except){
+
+        currentBuild.result = 'FAILURE'
+        throw new Exception(exec)
 
     }finally {
 
