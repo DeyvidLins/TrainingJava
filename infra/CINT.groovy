@@ -2,21 +2,14 @@ node ('master'){
     try {
         stage('Clonando do Repositório'){
             checkout scm            
-            sh 'pwd'
-        }
-
-        stage('Instalando o Java'){   
-            sh 'java -version'         
-            sh 'java Test.java'
-        }
+            
+        }       
 
         stage('Verificando a Versão do Java e JavaC'){            
-            sh 'java Test.java'
+            sh 'javac Test.java'
+            sh 'java Test'
         }
-
-        stage('Executando o comando Java'){            
-            sh 'java Test.java'
-        }
+       
 
     }catch(except){
 
