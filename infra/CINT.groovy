@@ -2,6 +2,7 @@ node ('master'){
     try {
         stage('Clonando do Repositório'){
             checkout scm
+            sh 'git clone https://github.com/DeyvidLins/TrainingJava.git'
             sh 'pwd'
         }
 
