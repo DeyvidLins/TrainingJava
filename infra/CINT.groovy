@@ -1,6 +1,7 @@
 node ('master'){
     try {
         stage('Clonando do Repositório'){
+            cleanWs()
             checkout scm            
             
         }       
@@ -17,6 +18,8 @@ node ('master'){
             sh './sfdx/install'
             sh 'sfdx'
         }
+
+        
         
        
 
