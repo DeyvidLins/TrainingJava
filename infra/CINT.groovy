@@ -16,7 +16,7 @@ node ('master'){
             sh 'pwd'
         }
 
-        tage('Instalação do sfdx'){
+        stage('Instalação do sfdx'){
             sh 'wget https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-linux-x64.tar.xz'
             sh 'mkdir sfdx'
             sh 'ls'
