@@ -18,7 +18,7 @@ node ('master'){
 
         stage('Instalação do sfdx'){            
             sh 'mkdir sfdx'
-            sh 'sudo apt-get install xz-utils'
+            sh 'apt-get install xz-utils'
             sh 'tar xJf sfdx-cli-linux-x64.tar.xz -C sfdx --strip-components 1'
             sh './sfdx/install'
             sh 'sfdx'
