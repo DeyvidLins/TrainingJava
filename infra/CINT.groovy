@@ -11,21 +11,11 @@ node ('master'){
             sh 'java Test'
         }
 
-        stage('Instalação do sfdx'){
-            sh 'wget https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-linux-x64.tar.xz'
-            sh 'pwd'
-        }
 
-        stage('Instalação do sfdx'){            
-            sh 'mkdir sfdx'
-            sh 'apt-get install xz-utils'
-            sh 'tar xJf sfdx-cli-linux-x64.tar.xz -C sfdx --strip-components 1'
-            sh './sfdx/install'
-            sh 'sfdx'
-        }
+        stage ('Listando as orgs'){
+            sh 'sfdx foce:org:list --all'
 
-
-        
+        }          
         
        
 
