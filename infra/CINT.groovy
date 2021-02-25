@@ -13,7 +13,8 @@ node ('master'){
 
 
         stage ('Listando as orgs'){
-            sh 'sfdx foce:org:list --all'
+            sh 'sfdx force:org:list --all'
+'
 
         }          
         
